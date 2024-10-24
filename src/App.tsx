@@ -1,9 +1,12 @@
+import { BrowserRouter as Router } from 'react-router-dom'
 import './assets/css/App.css'
-import AppRouter from './routing/AppRouter'
+import Navbar from './routing/Navbar'
 
 function App() {
   return (
-    <AppRouter/>
+    <Router>
+      <Navbar />
+    </Router>
   )
 }
 
