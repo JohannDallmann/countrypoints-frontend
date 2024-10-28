@@ -18,6 +18,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import PublicIcon from '@mui/icons-material/Public';
 import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
+import HomeIcon from '@mui/icons-material/Home';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import Landingpage from '../views/Landingpage';
 import ListView from '../views/ListView';
@@ -98,7 +99,11 @@ export default function Navbar() {
     };
 
     const handleNavigation = (route: string) => {
-        navigate(route);
+        if (route === "/home"){
+            navigate("/");
+        } else {
+            navigate(route);
+        }
       };
 
     return (
@@ -145,7 +150,7 @@ export default function Navbar() {
                 </DrawerHeader>
                 <Divider />
                 <List>
-                    {['Liste', 'Karte'].map((text, index) => (
+                    {['Home','Liste', 'Karte'].map((text, index) => (
                         <ListItem key={text} disablePadding>
                             <ListItemButton onClick={() => handleNavigation(`/${text.toLowerCase().replace(' ', '')}`)}>
                                 <ListItemIcon>
@@ -156,6 +161,8 @@ export default function Navbar() {
                                                     return <FormatListBulletedIcon />;
                                                 case 'Karte':
                                                     return <PublicIcon />;
+                                                case 'Home':
+                                                    return <HomeIcon />;
                                                 default:
                                                     return null;
                                             }

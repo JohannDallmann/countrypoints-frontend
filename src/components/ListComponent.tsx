@@ -36,9 +36,9 @@ export default function ListComponent() {
     ]
 
     const rows = [
-        { id: 1, nr: 1, date : new Date('2001-12-01'), country : 'Deutschland', game : 'Union 0:4 Frankfurt', stadium: 'Alte Försterei' },
-        { id: 2, nr: 2, date : new Date('2010-12-31'), country : 'Italien', game : 'Pula 1:3 Orrolese', stadium: 'Stadio Communale' },
-        { id: 3, nr: 3, date : new Date('2011-01-25'), country : 'Spanien', game : 'Espanyol 0:1 Atletico', stadium: 'Estadio del Prat' },
+        { id: 1, nr: 1, date : new Date('2001-12-01'), country : 'Deutschland', game : 'Team A 0:4 Team B', stadium: 'Stadion 1' },
+        { id: 2, nr: 2, date : new Date('2010-12-31'), country : 'Italien', game : 'Squadra A 1:3 Squadra B', stadium: 'Stadio 2' },
+        { id: 3, nr: 3, date : new Date('2011-01-25'), country : 'Spanien', game : 'Team C 0:1 Team D', stadium: 'Estadio 3' },
     ];
   
     return (
