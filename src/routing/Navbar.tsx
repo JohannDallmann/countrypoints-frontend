@@ -109,7 +109,7 @@ export default function Navbar() {
     return (
         <Box sx={{ display: 'flex' }}>
             <CssBaseline />
-            <AppBar position="fixed" open={open}>
+            <AppBar position="fixed" open={open} color='secondary' >
                 <Toolbar>
                     <IconButton
                         color="inherit"

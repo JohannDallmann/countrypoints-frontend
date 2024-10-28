@@ -22,9 +22,9 @@ const images = [
 const ImageButton = styled(ButtonBase)(({ theme }) => ({
   position: 'relative',
   height: 400,
-  [theme.breakpoints.down('sm')]: {
-    width: '100% !important', // Overrides inline-style
-    height: 100,
+  [theme.breakpoints.down('md')]: {
+    //width: '100% !important', // Overrides inline-style
+    height: 200,
   },
   '&:hover, &.Mui-focusVisible': {
     zIndex: 1,
@@ -88,8 +88,11 @@ export default function ImageButtonComponent() {
     return (
     <Box sx={{ 
         display: 'flex',
+        flexDirection: {xs: "column", sm: "column", md: "row", lg: "row"},
+        justifyContent: 'space-between',
+        alignItems: 'center',
         minWidth: 300, 
-        width: '100%', 
+        //width: '100%', 
         marginTop: 5,
         gap: 1 }}>
       {images.map((image) => (
