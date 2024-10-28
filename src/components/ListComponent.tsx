@@ -1,3 +1,4 @@
+import { Box, Typography } from '@mui/material';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
 
 export default function ListComponent() {
@@ -42,17 +43,18 @@ export default function ListComponent() {
     ];
   
     return (
-    <div style={{ maxWidth: '900px' }}>
-        <h1>Länderpunkte Übersicht</h1>
+    <Box sx={{ maxWidth: '900px' }}>
+        <Typography variant='h3'>Länderpunkte Übersicht</Typography>
         <DataGrid
         rows={rows}
         columns={columns}
+        sx={{marginTop: 3}}
         disableColumnResize
         disableRowSelectionOnClick
         autosizeOnMount
-        hideFooterPagination
+        hideFooter
         disableColumnFilter
         disableColumnMenu/>
-    </div>
+    </Box>
   )
 }

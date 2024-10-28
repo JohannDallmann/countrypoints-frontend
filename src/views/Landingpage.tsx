@@ -1,26 +1,17 @@
-import { Button, Typography } from "@mui/material";
-import PublicIcon from '@mui/icons-material/Public';
-import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
-import { useNavigate } from "react-router-dom";
+import { Typography } from "@mui/material";
+import ImageButtonComponent from "../components/ImageButtonComponent";
 
-export default function Landingpage() {
-  const navigate = useNavigate();
+type Props = {
+  open : boolean;
+}
+
+export default function Landingpage(props: Props) {
+  
   return (
-    <Typography sx={{ marginBottom: 2 }}>
-      <h1>Herzlich Willkommen!</h1>
-      <p>Schau dir deine Länderpunkte in der Listenansicht oder auf der Karte an.</p>
-      <Button
-        variant="contained"
-        onClick={() => navigate("/liste")}
-        startIcon={<FormatListBulletedIcon />}>
-        Liste
-      </Button>
-      <Button
-        variant="contained"
-        onClick={() => navigate("/karte")}
-        startIcon={<PublicIcon />}>
-        Karte
-      </Button>
+    <Typography sx={{ marginBottom: 2, width: props.open ? "60vw" : "65vw"}}>
+      <Typography variant="h3">Herzlich Willkommen!</Typography>
+      <Typography variant="body1">Schau dir deine Länderpunkte in der Listenansicht oder auf der Karte an.</Typography>
+      <ImageButtonComponent/>
     </Typography>
   )
 }

@@ -150,7 +150,7 @@ export default function Navbar() {
                 </DrawerHeader>
                 <Divider />
                 <List>
-                    {['Home','Liste', 'Karte'].map((text, index) => (
+                    {['Home','Liste', 'Karte'].map((text) => (
                         <ListItem key={text} disablePadding>
                             <ListItemButton onClick={() => handleNavigation(`/${text.toLowerCase().replace(' ', '')}`)}>
                                 <ListItemIcon>
@@ -178,7 +178,7 @@ export default function Navbar() {
             <Main open={open}>
                 <DrawerHeader />
                 <Routes>
-                    <Route path="/" element={<Landingpage />} />
+                    <Route path="/" element={<Landingpage open={open}/>} />
                     <Route path="/liste" element={<ListView />} />
                     <Route path="/karte" element={<MapView />} />
                 </Routes>
