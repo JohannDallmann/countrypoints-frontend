@@ -25,26 +25,26 @@ export default function ListComponent() {
             sortable: true
         },
         { 
-            field: 'game', 
-            headerName: 'Spiel',
+            field: 'reason', 
+            headerName: 'Reisegrund',
             sortable: false
         },
         { 
-            field: 'stadium', 
-            headerName: 'Stadion',
+            field: 'cities', 
+            headerName: 'Besuchte Städte',
             sortable: false
         },
     ]
 
     const rows = [
-        { id: 1, nr: 1, date : new Date('2001-12-01'), country : 'Deutschland', game : 'Team A 0:4 Team B', stadium: 'Stadion 1' },
-        { id: 2, nr: 2, date : new Date('2010-12-31'), country : 'Italien', game : 'Squadra A 1:3 Squadra B', stadium: 'Stadio 2' },
-        { id: 3, nr: 3, date : new Date('2011-01-25'), country : 'Spanien', game : 'Team C 0:1 Team D', stadium: 'Estadio 3' },
+        { id: 1, nr: 1, date : new Date('2001-12-01'), country : 'Deutschland', reason : 'Geburt', cities: 'Berlin, Frankfurt' },
+        { id: 2, nr: 2, date : new Date('2010-12-31'), country : 'Italien', reason : 'Arbeit', cities: 'Rom' },
+        { id: 3, nr: 3, date : new Date('2011-01-25'), country : 'Spanien', reason : 'Urlaub', cities: 'Madrid, Barcelona, Bilbao' },
     ];
   
     return (
     <Box sx={{ maxWidth: '900px' }}>
-        <Typography variant='h3'>Länderpunkte Übersicht</Typography>
+        <Typography variant='h3'>Übersicht über besuchte Länder</Typography>
         <DataGrid
         rows={rows}
         columns={columns}
