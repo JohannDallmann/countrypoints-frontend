@@ -90,6 +90,13 @@ export default function Navbar() {
     const [open, setOpen] = React.useState(false);
     const navigate = useNavigate();
 
+    const rows = [
+        { id: 1, nr: 1, date : new Date('2001-12-01'), country : 'Deutschland', reason : 'Geburt', cities: 'Berlin, Frankfurt' },
+        { id: 2, nr: 2, date : new Date('2010-12-31'), country : 'Italien', reason : 'Arbeit', cities: 'Rom' },
+        { id: 3, nr: 3, date : new Date('2011-01-25'), country : 'Spanien', reason : 'Urlaub', cities: 'Madrid, Barcelona, Bilbao' },
+        { id: 4, nr: 4, date : new Date('2014-01-31'), country : 'Australien', reason : 'Work and Travel', cities: 'Sydney, Byron Bay' },
+    ];
+
     const handleDrawerOpen = () => {
         setOpen(true);
     };
@@ -179,8 +186,8 @@ export default function Navbar() {
                 <DrawerHeader />
                 <Routes>
                     <Route path="/" element={<Landingpage open={open}/>} />
-                    <Route path="/liste" element={<ListView />} />
-                    <Route path="/karte" element={<MapView />} />
+                    <Route path="/liste" element={<ListView rows={rows} />} />
+                    <Route path="/karte" element={<MapView rows={rows} />} />
                 </Routes>
             </Main>
         </Box>

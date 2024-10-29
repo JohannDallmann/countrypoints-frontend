@@ -1,10 +1,14 @@
-import { Box, Typography } from "@mui/material";
+import { Box} from "@mui/material";
+import MapComponent from "../components/MapComponent";
 
+type Props = {
+  rows : { id: number; nr: number; date: Date; country: string; reason: string; cities: string; }[];
+}
 
-export default function MapView() {
+export default function MapView(props:Props) {
   return (
     <Box>
-      <Typography variant="h3">Welcome to the MapView</Typography>
+      <MapComponent rows={props.rows}/>
     </Box>
   )
 }

@@ -1,9 +1,13 @@
 import ListComponent from "../components/ListComponent";
 
-export default function ListView() {
+type Props = {
+  rows : { id: number; nr: number; date: Date; country: string; reason: string; cities: string; }[];
+}
+
+export default function ListView(props:Props) {
   return (
     <div>
-        <ListComponent/>
+        <ListComponent rows={props.rows}/>
     </div>
   )
 }
