@@ -8,7 +8,7 @@ type Props = {
 export default function Landingpage(props: Props) {
   
   return (
-    <Typography sx={{ marginBottom: 2, width: props.open ? "60vw" : "65vw"}}>
+    <Typography sx={{ marginBottom: 2, marginTop: 2, width: props.open ? "60vw" : "65vw"}}>
       <Typography variant="h3">Herzlich Willkommen!</Typography>
       <Typography variant="body1">Schau dir deine besuchten Länder in der Listenansicht oder auf der Karte an.</Typography>
       <ImageButtonComponent/>

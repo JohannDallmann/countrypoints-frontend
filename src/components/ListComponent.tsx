@@ -43,7 +43,7 @@ export default function ListComponent(props:Props) {
     
   
     return (
-    <Box sx={{ maxWidth: '900px' }}>
+    <Box sx={{ maxWidth: '900px', marginTop: 2}}>
         <Typography variant='h3'>Übersicht über besuchte Länder</Typography>
         <DataGrid
         rows={props.rows}
