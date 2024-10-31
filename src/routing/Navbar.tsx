@@ -186,7 +186,7 @@ export default function Navbar() {
                 <Routes>
                     <Route path="/" element={<Landingpage open={open}/>} />
                     <Route path="/liste" element={<ListView rows={rows} />} />
-                    <Route path="/karte" element={<MapView rows={rows} />} />
+                    <Route path="/karte" element={<MapView rows={rows} drawerWidth={drawerWidth} open={open}/>} />
                 </Routes>
             </Main>
         </Box>
